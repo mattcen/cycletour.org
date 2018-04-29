@@ -12,11 +12,11 @@
     {
     marker-allow-overlap:true;
     marker-ignore-placement:true;
-    [city_distance < 6000] { 
+    /*[city_distance < 6000] { 
       
       marker-allow-overlap:false;
       marker-ignore-placement:false;
-    }
+    }*/
   }
   
   //[amenity="shelter"]   { marker-file:url('http://www.sjjb.co.uk/mapicons/png/accommodation_shelter2.p.16.png'); }
@@ -71,7 +71,7 @@
 }
 
 //Labels
-#amenities[zoom >= 13][city_distance>6000.0],
+//#amenities[zoom >= 13][city_distance>6000.0],
 #amenities[zoom >= 12][brewery="yes"],
 #amenities[zoom >= 16]{
 [tourism=~"hotel|guest_house|basic_hut|alpine_hut|wilderness_hut|caravan_site|camp_site|winery|viewpoint|picnic_site|attraction"],
@@ -89,7 +89,7 @@
       text-size:10; 
       [zoom >= 16] { text-name:[name]; text-face-name:'Roboto Condensed Light'; text-size: 12; }
       text-dx:10;
-      [city_distance > 6000] { text-allow-overlap:true; }
+      //[city_distance > 6000] { text-allow-overlap:true; }
       text-fill: hsl(220,90%,50%);
       text-wrap-width:50;
 
@@ -111,10 +111,10 @@
       marker-file:url('maki/beer-24.png');
     }
     marker-allow-overlap:true;
-    [city_distance < 6000] { 
+    /*[city_distance < 6000] { 
       marker-file:url('maki/beer-12.png');
       marker-allow-overlap:false;
-    }
+    }*/
     [brewery="yes"][zoom >= 12] {
 //    marker-file:url('http://www.sjjb.co.uk/mapicons/png/food_biergarten.p.24.png');
       marker-file:url('http://www.sjjb.co.uk/mapicons/png/food_biergarten.glow.32.png');
@@ -273,11 +273,11 @@
 
 }
 
-#green[natural='wetland'] {
+/*#green[natural='wetland'] {
   polygon-pattern-file:url('textures/green_cup.png');
   //polygon-opacity:0.5;
   polygon-pattern-opacity:0.5;
-}
+}*/
 
 #green[zoom >=15][is_park=1][size > 10000][size < 100000][leisure != 'pitch']::parklabel {
     text-face-name:'CartoGothic Std Italic';
